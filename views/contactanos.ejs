@@ -1,0 +1,11 @@
+    <%- include("templante/encabezado.ejs", {titulo:"Bienvenido a Contactanos"})%>
+    <form action="/contactanos" id="formulario" method="POST">
+        <label for="nombre">Nombre </label>
+        <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre" required><br><br>
+
+        <label>Edad </label>
+        <input class="form-control" type="text" name="edad" id="edad" placeholder="Edad" required><br><br>
+
+        <button type="submit">Enviar</button>
+    </form><br><br>
+    <%- include("templante/pie.ejs")%>

@@ -1,0 +1,13 @@
+<%- include("templante/encabezado.ejs", {titulo: "Editar Contacto"})%>
+	<form action="/editarContacto" id="formulario" method="POST">
+        <input type="hidden" name="id" id="id" value="<%= contactoBD._id %>">
+
+        <label for="nombre">Nombre </label>
+        <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre" required value="<%= contactoBD.nombre %>"><br><br>
+
+        <label>Edad </label>
+        <input class="form-control" type="text" name="edad" id="edad" placeholder="Edad" required value="<%= contactoBD.edad %>"><br><br>
+
+        <button type="submit">Actualizar</button>
+    </form><br><br>
+<%- include("templante/pie.ejs")%>

@@ -1,0 +1,45 @@
+    <%- include("templante/encabezado.ejs", {titulo:"Bienvenido a Inicio"})%>
+    <%
+      var a = 8
+      var b = 10
+      var c = a + b
+      var texto = "Esto es un texto"
+    %>
+    <%= c%>
+
+    <a href="/info/<%= c%>">Enviar datos</a>
+
+    <ul><!-- lista no ordenada-->
+      <% artistas.forEach((artista)=>{%>
+        <li><%= artista %></li>
+      <%}) %> <!-- cada artista un resultado-->
+    </ul>
+    <table class="table">
+      <thead class="table-primary">
+        <tr> 
+          <th scope="col">Artista</th> 
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <% artistas.forEach((artista)=>{%>
+        <tr class="table-secondary">
+          <td><%= artista %></td>
+        </tr>
+        <%}) %>
+      </tbody>
+    </table>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <%- include("templante/pie.ejs")%>

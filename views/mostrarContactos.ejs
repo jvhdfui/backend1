@@ -1,0 +1,22 @@
+<%- include("templante/encabezado.ejs", {titulo: "Mostrar Contactos"})%>
+<table>
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Edad</th>
+			<th>Editar / Borrar</th>
+	</thead>
+	<tbody>
+		<% contactosBD.forEach(contacto=>{ %> <!--Para juntar html y java se cierra y se abre de nuevo -->
+		<tr>
+			<td><%= contacto.nombre %></td>
+			<td><%= contacto.edad %></td>
+			<td>
+				<a href="/editar/<%= contacto._id %>">Editar /</a>
+				<a href="/borrar/<%= contacto._id %>">Borrar </a>
+			</td>
+		</tr>
+		<% }) %>
+	</tbody>
+</table>
+<%- include("templante/pie.ejs")%>
